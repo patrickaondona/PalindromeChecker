@@ -1,0 +1,40 @@
+body{
+    background: linear-gradient(to right, #00d1e0, #001c70);
+}
+body div{
+    width: 500px;
+    height: 240px;
+    margin: 100px 0px 0px 350px;
+    padding-left: 80px;
+    border-radius: 30px;
+    color: #00d1e0;
+    background-color: black;
+    border: solid black;
+}
+button{
+    margin: 40px 0 0 160px;
+    width: 100px;
+    height: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #00d1e0;
+}
+#response{
+    color: #000000;
+    background-color: #00d1e0;
+    position: relative;
+    top: 50px;
+    right: 125px;
+}
+body h1{
+    font-family:'Courier New', Courier, monospace;
+    border: solid wheat;
+    text-align: center;
+    margin-right: 80px;
+    border-color: #00d1e0
+}
+body span, input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body input{
+    background-color: #00d1e0;
+}
