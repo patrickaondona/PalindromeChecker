@@ -1,22 +1,18 @@
-let inputItem = document.getElementById("inputItem");
-let checkButton = document.querySelector("button");
-let response = document.getElementById("response");
+const checkButton = document.getElementById("check-btn");
+const input = document.getElementById("input");
+const resultText = document.getElementById("result-txt");
 
-function isPalindrome() {
-    if (inputItem.value == ""){
-        alert("Please input a value");
-    } 
-    else{
-        let forwardValue = inputItem.value;
-        let reverseValue = inputItem.value.split('').reverse().join('');
-        if( forwardValue == reverseValue){
-            response.innerText = (`"${forwardValue}" is a palindrome.`);    
-        }
-        else{
-            response.innerText = (`"${forwardValue}" is not a palindrome.`);
-        }
-    }
-    inputItem.value = "";
-}
-checkButton.addEventListener("click", isPalindrome);
+checkButton.addEventListener("click", () => {
+  const inputValue = input.value;
+  const forwardValue = inputValue.replace(" ", "").split("").join("");
+  const backwardValue = inputValue.replace(" ", "").split("").reverse().join("");
 
+  if (input.value === "") {
+    alert("Please insert a text, phrase or number");
+  }
+  if (backwardValue === forwardValue) {
+    resultText.innerText = `"${inputValue}" is a palindrome!`;
+  } else {
+    resultText.innerText = `"${inputValue}" is not a palindrome.`;
+  }
+});

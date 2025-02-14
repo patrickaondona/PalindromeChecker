@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Palindrome Checker</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div>
-        <h1>PALINDROME <span id="white-text">CHECKER</span></h1>
-        <span>Please insert a text or <span id="white-text">number :</span></span>
-        <input type="text" id="inputItem">
-        <button>Check</button>
-        <span id="response"></span>
-    </div>
-
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-repeat"></i>
+      <p>PALINDROME CHECKER</p>
+      <i class="fa-solid fa-repeat"></i>
+    </header>
+    <section>
+      <p>
+        A "palindrome" is a word, phrase, or sequence that reads the same
+        backwards as forward.
+      </p>
+      <input
+        type="text"
+        placeholder="Insert a text, phrase or number"
+        id="input"
+      />
+      <button id="check-btn">Check</button>
+      <p id="result-txt"></p>
+    </section>
+    <img src="palindrome.avif" alt="mom palindrome" id="palindrome-img" />
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

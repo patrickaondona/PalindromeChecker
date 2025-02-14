@@ -1,43 +1,165 @@
-body{
-    background-image: url(images/palindrome\ img.jpg_large);
+* {
+  margin: 0;
+  font-family: monospace;
 }
-body div{
-    width: 500px;
-    height: 240px;
-    margin: 100px 0px 0px 350px;
-    padding-left: 80px;
-    border-radius: 30px;
-    color: #000000;
-    background: linear-gradient(to right, #5A89B5, #3B5566);
-    border: solid black;
+
+body {
+  background-color: rgb(0, 0, 73);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vh;
+  user-select: none;
 }
-button{
-    margin: 40px 0 0 160px;
-    width: 100px;
-    height: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(to right, #5A89B5, #3B5566);
+header {
+  width: 100%;
+  background-color: rgb(0, 162, 216);
+  color: rgb(0, 0, 73);
+  padding: 2vh 0;
+  font-weight: 600;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
 }
-#response{
-    color: #000000;
-    background-color: #5A89B5;
-    position: relative;
-    top: 50px;
-    right: 125px;
+
+
+section {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2vh 4vw;
+  width: 50vw;
+  height: 35vh;
+  margin-left: -20vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: center;
 }
-body h1{
-    font-family:'Courier New', Courier, monospace;
-    border: solid #000000;
-    text-align: center;
-    margin-right: 80px;
+
+section p {
+  font-size: 1.4rem;
+  color: rgb(0, 0, 73);
 }
-body span, input{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+section input {
+  width: 30vw;
+  height: 5vh;
+  border-radius: 5px;
+  border: none;
+  color: rgb(0, 0, 73);
+  outline-color: rgb(0, 0, 73);
+  padding-left: 1vw;
+  font-size: 1.2rem;
+  border: 2px solid rgb(0, 162, 216);
 }
-body input{
-    background-color: #3B5566;
+
+section button {
+  padding: 1.7vh 4vw;
+  border: none;
+  background-color: rgb(0, 162, 216);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
-#white-text{
-    color: #FFFFFF;
-    font-family: 'Courier New', Courier, monospace;
+
+section button:hover {
+  background-color: rgb(0, 0, 73);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+#palindrome-img {
+  margin-top: -40vh;
+  margin-left: 22vw;
+  z-index: -1;
+}
+
+#result-txt {
+  margin-top: 2vh;
+}
+
+@keyframes rotate {
+  0% {
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.fa-repeat {
+  animation: rotate 4s ease-in 4s infinite;
+}
+
+
+
+
+/*-----------------RESPONSIVENESS------------------*/
+
+@media (min-width: 992px) and (max-width: 1350px) {
+  #palindrome-img {
+    width: 50vw;
+    height: 60vh;
+    margin-top: -40vh;
+    margin-left: 22vw;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    margin: 0 0 0 -20vw;
+  }
+
+  #palindrome-img {
+    margin: -16vh 4vw 0 16vw;
+    width: 50vw;
+    height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    gap: 7vh;
+  }
+  section {
+    height: 40vh;
+    width: 55vw;
+  }
+  section input {
+    width: 40vw;
+  }
+  section button {
+    padding: 1.7vh 8vw;
+  }
+  #palindrome-img {
+    margin: -13vh 4vw 0 16vw;
+    width: 60vw;
+    height: 38vh;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 7vh;
+  }
+  header {
+    font-size: 2.5rem;
+  }
+  section {
+    margin: 0;
+    width: 70vw;
+  }
+  section input {
+    width: 50vw;
+  }
+  #palindrome-img {
+    margin: -13vh 0 0 0;
+    width: 78vw;
+    height: 38vh;
+  }
 }
