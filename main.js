@@ -4,8 +4,8 @@ const resultText = document.getElementById("result-txt");
 
 checkButton.addEventListener("click", () => {
   const inputValue = input.value;
-  const forwardValue = inputValue.replace(" ", "").split("").join("");
-  const backwardValue = inputValue.replace(" ", "").split("").reverse().join("");
+  const forwardValue = inputValue.replace(" ", "").toLowerCase().split("").join("");
+  const backwardValue = inputValue.replace(" ", "").toLowerCase().split("").reverse().join("");
 
   if (input.value === "") {
     alert("Please insert a text, phrase or number");
