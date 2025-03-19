@@ -9,6 +9,8 @@ checkButton.addEventListener("click", () => {
 
   if (input.value === "") {
     alert("Please insert a text, phrase or number");
+    resultText.innerText = "";
+    return;
   }
   if (backwardValue === forwardValue) {
     resultText.innerText = `"${inputValue}" is a palindrome!`;
